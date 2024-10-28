@@ -1,0 +1,159 @@
+
+.appartement-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .appartement-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; 
+
+    .appartement-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 15px;
+        h1 {
+            font-size: 28px; 
+            color: #ff6060;
+            margin: 0;
+        }
+
+        .tags {
+            display: flex; 
+            flex-wrap: wrap; 
+
+            .tag {
+                background-color: #ff6060;
+                color: white;
+                padding: 5px 10px;
+                margin-right: 8px; 
+                border-radius: 5px;
+                font-size: 14px; 
+            }
+        }
+    }
+}
+
+.host-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .host-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin-top: 5px;
+    }
+  }
+  .rating {
+    display: flex; 
+    gap: 5px; 
+
+    .fa-star {
+        color: #e3e3e3; 
+        font-size: 24px; 
+    }
+
+    .filled {
+        color: #ff6060; 
+    }
+}
+}
+
+
+  
+  .appartement-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  
+    .accordion {
+      width: 45%;
+  
+      .accordion-button {
+        width: 100%;
+        background-color: #ff6060;
+        color: white;
+        padding: 10px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: left;
+      }
+  
+      .accordion-content {
+        margin-top: 10px;
+        background-color: #f7f7f7;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+
+    .appartement-info {
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    .host-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+
+      .rating {
+        gap: 0px;
+        .fa-star {
+          font-size: 15px;
+        }
+      }
+
+    }
+  
+      .host-name {
+
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        order: 2;
+  
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+      }
+
+      .appartement-details {
+        display: flex;
+        flex-direction: column;
+
+        .accordion {
+          width: 100%;
+        }
+      }
+
+  }

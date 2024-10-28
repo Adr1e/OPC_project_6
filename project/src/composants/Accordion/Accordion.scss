@@ -1,0 +1,85 @@
+.accordion-container {
+    width: 100%;
+    max-width: 1023px; 
+    margin: 0 auto;  
+  }
+  
+  .accordion {
+    width: 100%;  
+    margin-bottom: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+  
+    .accordion-header {
+      background-color: #f05a5b;  
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-weight: bold;
+      cursor: pointer;
+  
+      h3 {
+        margin: 0;
+        font-size: 30px;
+      }
+  
+      .accordion-icon {
+        font-size: 25px;
+        transition: transform 0.3s ease;  // Animation pour la rotation de la flèche
+        transform: rotate(0deg);  // Par défaut, la flèche est pointée vers le haut
+      }
+  
+      .accordion-icon.open {
+        animation: rotateArrow 0.3s ease forwards;  // Appliquer l'animation quand l'accordéon est ouvert
+      }
+    }
+  
+    .accordion-content {
+      background-color: lightgrey;
+      color: black;
+      padding: 20px;
+      font-size: 25px;
+    }
+  
+    @keyframes rotateArrow {
+      0% {
+        transform: rotate(0deg);  // Flèche pointée vers le haut
+      }
+      50% {
+        transform: rotate(-90deg);  // Flèche tournée vers la gauche
+      }
+      100% {
+        transform: rotate(-180deg);  // Flèche pointée vers le bas
+      }
+    }
+  }
+
+  .equipments-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+  }
+
+
+  @media (max-width: 768px) {
+    .accordion {
+
+      .accordion-content {
+        font-size: 14px;
+      }
+
+      
+      .accordion-header {
+        h3{
+          font-size: 15px;
+        }
+      }
+    }
+
+
+  }

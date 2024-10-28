@@ -1,0 +1,50 @@
+
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    h1 {
+        color: #f05a5b;
+        font-size: 280px;
+        margin-bottom: 80px;
+    }
+
+    h2 {
+        text-align: center;
+        color : #f05a5b;
+        font-size: 40px;
+        margin-bottom: 80px;
+    }
+    
+    .error-nav {
+        text-align: center;
+        font-size: 30px;
+        text-decoration: underline;
+        margin-bottom: 80px;
+    }
+    
+    a, .link {
+        color: black;  
+        font-weight: bold;
+        
+      }
+  }
+
+
+  @media (max-width: 768px) {
+    .error-container {
+        h1 {
+            font-size: 100px;
+        }
+        h2 {
+            font-size: 20px;
+            line-height: 25px;
+        }
+        .error-nav {
+            font-size: 14px;
+        }
+    }
+  }
